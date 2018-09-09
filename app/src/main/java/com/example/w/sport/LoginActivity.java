@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 
 /**
- * Created by WCF on 2018/6/26.
+ * Created by w on 2018/6/26.
  */
 public class LoginActivity extends ActionBarActivity {
     @Override
