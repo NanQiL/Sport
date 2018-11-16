@@ -14,23 +14,23 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SPORT"
+        android:text="@string/sport"
         android:textSize="90dp"
         android:textStyle="italic"
         android:gravity="center"
-        android:textColor="#00a9fd"
+        android:textColor="#83af9b"
         android:typeface="serif"
-        android:layout_marginTop="200dp"/>
+        android:layout_marginTop="100dp"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="1">
         <Button
             android:id="@+id/btn_Login"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="登录"
+            android:text="@string/login"
             android:textSize="25dp"
             android:layout_gravity="bottom"
             android:background="@drawable/button"
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginLeft="10dp"
-            android:text="注册"
+            android:text="@string/register"
             android:textSize="25dp"
             android:layout_gravity="bottom"
             android:background="@drawable/button"

@@ -3,7 +3,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_login">
+    android:background="@drawable/login_background"
+    >
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,32 +16,29 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="账    号:"
+                android:text="@string/phone"
                 android:textSize="20dp"
-                android:textColor="#312d2d"
-                android:backgroundTint="#000000"
                 />
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/et_ID"
-                android:inputType="phone|textEmailAddress"/>
+                android:id="@+id/et_register_phone"
+                android:inputType="phone|text"/>
         </TableRow>
         <TableRow
             android:layout_marginTop="10dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="密    码:"
+                android:text="@string/password"
                 android:textSize="20dp"
-                android:textColor="#312d2d"
-                android:backgroundTint="#000000"/>
+                />
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/et_Password"
+                android:id="@+id/et_register_password"
                 android:inputType="textPassword"/>
         </TableRow>
         <TableRow
@@ -48,62 +46,52 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="密码确认:"
+                android:text="@string/verification_code"
                 android:textSize="20dp"
-                android:textColor="#312d2d"
-                android:backgroundTint="#000000"/>
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/et_Password_Confirm"
-                android:inputType="textPassword"/>
-        </TableRow>
-        <TableRow
-            android:layout_marginTop="10dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="昵    称:"
-                android:textSize="20dp"
-                android:textColor="#312d2d"
-                android:backgroundTint="#000000"/>
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/et_Name"
                 />
-        </TableRow>
-        <TableRow
-            android:layout_marginTop="10dp">
-            <TextView
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/et_verification_code"
+                />
+            <Button
+                android:id="@+id/btn_send_code"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="性    别:"
+                android:text="@string/send"
                 android:textSize="20dp"
-                android:textColor="#312d2d"
-                android:backgroundTint="#000000"/>
-            <RadioGroup
-                android:orientation="horizontal"
-                android:id="@+id/sex">
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="男"
-                    android:textSize="20dp"
-                    android:id="@+id/male"
-                    android:checked="true"
-                    android:layout_marginLeft="20dp"/>
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="女"
-                    android:textSize="20dp"
-                    android:id="@+id/female"
-                    android:layout_marginLeft="50dp"/>
-            </RadioGroup>
+                android:background="@drawable/button_login"/>
         </TableRow>
+        <!--<TableRow-->
+            <!--android:layout_marginTop="10dp">-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="性    别:"-->
+                <!--android:textSize="20dp"-->
+                <!--android:textColor="#312d2d"-->
+                <!--android:backgroundTint="#000000"/>-->
+            <!--<RadioGroup-->
+                <!--android:orientation="horizontal"-->
+                <!--android:id="@+id/sex">-->
+                <!--<RadioButton-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="男"-->
+                    <!--android:textSize="20dp"-->
+                    <!--android:id="@+id/male"-->
+                    <!--android:checked="true"-->
+                    <!--android:layout_marginLeft="20dp"/>-->
+                <!--<RadioButton-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="女"-->
+                    <!--android:textSize="20dp"-->
+                    <!--android:id="@+id/female"-->
+                    <!--android:layout_marginLeft="50dp"/>-->
+            <!--</RadioGroup>-->
+        <!--</TableRow>-->
     </TableLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -112,10 +100,11 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp">
         <Button
+            android:id="@+id/btn_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/button_login"
-            android:text="注册"
+            android:text="@string/register"
             android:textSize="25dp"/>
     </LinearLayout>
 </LinearLayout>

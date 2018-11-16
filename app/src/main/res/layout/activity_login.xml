@@ -3,57 +3,159 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_login">
+    android:background="@drawable/login_background"
+    >
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome"
+        android:text="@string/login_text"
         android:textSize="80dp"
         android:gravity="center"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:textStyle="italic"
         android:typeface="monospace"
         android:textColor="#239567"/>
-    <EditText
-        android:id="@+id/et_User"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login_user"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_login_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone"
+                android:textSize="20sp"
+                android:inputType="phone"/>
+            <Button
+                android:id="@+id/btn_phone_clear"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="45dp"
+                android:background="@drawable/delete_message"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:backgroundTint="#080808"
-        android:layout_gravity="center"
-        android:layout_marginTop="90dp"
-        android:hint="E-mail或手机号"
-        android:textSize="20dp"
-        android:inputType="phone|textEmailAddress"/>
-    <EditText
-        android:id="@+id/et_Password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:backgroundTint="#080808"
-        android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:hint="密码"
-        android:textSize="20dp"
-        android:inputType="textPassword"/>
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login_lock"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/et_login_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:textSize="20sp"
+                android:inputType="textPassword"/>
+            <Button
+                android:id="@+id/btn_pwd_clear"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="45dp"
+                android:background="@drawable/delete_message"
+                android:visibility="invisible" />
+            <Button
+                android:id="@+id/btn_pwd_eye"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/password_close" />
+
+
+        </FrameLayout>
+    </LinearLayout>
+
     <Button
-        android:id="@+id/btn_Login_Confirm"
+        android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/button_login"
-        android:text="登录"
+        android:text="@string/login"
         android:textSize="25dp"/>
     <TextView
-        android:id="@+id/tv_Forget_Password"
+        android:id="@+id/tv_forget_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="忘记密码？"
+        android:text="@string/forget_pwd"
         android:textSize="20dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/colorLine"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/other_login"
+            android:layout_weight="1"
+            android:textSize="20dp"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/colorLine"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_login_qq"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_by_qq"/>
+        <Button
+            android:id="@+id/btn_login_weChat"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/login_by_wechat"/>
+
+    </LinearLayout>
 </LinearLayout>
