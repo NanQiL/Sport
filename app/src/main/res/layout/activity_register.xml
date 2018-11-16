@@ -17,14 +17,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/phone"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 />
-            <EditText
+            <FrameLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/et_register_phone"
-                android:inputType="phone|text"/>
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/et_register_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"/>
+                <ImageButton
+                    android:id="@+id/btn_phone_clear"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:background="@color/transparent"
+                    android:src="@drawable/delete_message"
+                    android:visibility="invisible" />
+            </FrameLayout>
         </TableRow>
         <TableRow
             android:layout_marginTop="10dp">
@@ -32,14 +45,40 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/password"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 />
-            <EditText
+            <FrameLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/et_register_password"
-                android:inputType="textPassword"/>
+                android:layout_weight="1">
+                <EditText
+                    android:id="@+id/et_register_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"/>
+                <ImageButton
+                    android:id="@+id/btn_pwd_clear"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginRight="45dp"
+                    android:src="@drawable/delete_message"
+                    android:background="@color/transparent"
+                    android:visibility="invisible" />
+                <ImageButton
+                    android:id="@+id/btn_pwd_eye"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/password_close"
+                    android:background="@color/transparent"
+                    android:visibility="invisible"
+                    />
+
+
+            </FrameLayout>
+
         </TableRow>
         <TableRow
             android:layout_marginTop="10dp">
@@ -47,7 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/verification_code"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 />
             <EditText
                 android:layout_width="0dp"
@@ -60,7 +99,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/send"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:background="@drawable/button_login"/>
         </TableRow>
         <!--<TableRow-->
@@ -105,6 +144,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/button_login"
             android:text="@string/register"
+            android:enabled="false"
             android:textSize="25dp"/>
     </LinearLayout>
 </LinearLayout>

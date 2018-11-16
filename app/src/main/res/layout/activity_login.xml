@@ -38,13 +38,14 @@
                 android:hint="@string/phone"
                 android:textSize="20sp"
                 android:inputType="phone"/>
-            <Button
+            <ImageButton
                 android:id="@+id/btn_phone_clear"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_gravity="end|center_vertical"
                 android:layout_marginRight="45dp"
-                android:background="@drawable/delete_message"
+                android:src="@drawable/delete_message"
+                android:background="@color/white"
                 android:visibility="invisible" />
         </FrameLayout>
 
@@ -78,15 +79,18 @@
                 android:layout_height="35dp"
                 android:layout_gravity="end|center_vertical"
                 android:layout_marginRight="45dp"
-                android:background="@drawable/delete_message"
+                android:background="@color/white"
+                android:src="@drawable/delete_message"
                 android:visibility="invisible" />
             <Button
                 android:id="@+id/btn_pwd_eye"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:layout_gravity="end|center_vertical"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/password_close" />
+                android:background="@color/white"
+                android:src="@drawable/password_close"
+                android:visibility="invisible"/>
 
 
         </FrameLayout>
@@ -145,17 +149,17 @@
         android:layout_marginRight="40dp"
         android:layout_marginTop="30dp"
         android:orientation="horizontal">
-        <Button
+        <ImageButton
             android:id="@+id/btn_login_qq"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/login_by_qq"/>
-        <Button
+            android:src="@drawable/login_by_qq"/>
+        <ImageButton
             android:id="@+id/btn_login_weChat"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"
-            android:background="@drawable/login_by_wechat"/>
+            android:src="@drawable/login_by_wechat"/>
 
     </LinearLayout>
 </LinearLayout>
